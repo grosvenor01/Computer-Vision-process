@@ -26,7 +26,6 @@ def print_gauss(sigma=1.4, vois_mat=3):
             ligne.append(val)
             somme_totale += val
         matrice.append(ligne)
-
     matrice_normalisee = [[val / somme_totale for val in ligne] for ligne in matrice]
 
     for ligne in matrice_normalisee:
@@ -40,7 +39,6 @@ def print_gauss(sigma=1.4, vois_mat=3):
 kernel = np.array(print_gauss())
 imgRes = cv2.filter2D(img,-1 , kernel)
 cv2.normalize(imgRes,imgRes,0,255,cv2.NORM_MINMAX)
-
 cv2.imshow("img" , img)
 cv2.imshow("result",imgRes)
 cv2.waitKey()
