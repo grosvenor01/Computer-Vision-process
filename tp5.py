@@ -27,7 +27,6 @@ def print_gauss(sigma=1.4, vois_mat=3):
             somme_totale += val
         matrice.append(ligne)
     matrice_normalisee = [[val / somme_totale for val in ligne] for ligne in matrice]
-
     for ligne in matrice_normalisee:
         for val in ligne:
             print("{:0.4f}".format(val), '\t', end=" ")
